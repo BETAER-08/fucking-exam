@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>타이머 및 스톱워치</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .minutes, .seconds, .milliseconds {
+            width: 40px;
+            text-align: center;
+        }
+        button{
+            background-color: #ccc; /* 직사각형 배경 색상 */
+            padding: 3px; /* 내부 여백 */
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            font-size: 16px; /* 글자 크기 조정 */
+            font-weight: bold; /* 글자 두껍게 설정 */
+        }
+        .button {
+            width: 120px;
+            height: 30px; /* 버튼 높이 설정 */
+            background-color: #333; /* 버튼 배경 색상 */
+            color: #fff; /* 글자색 설정 */
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px; /* 둥근 모서리 설정 */
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease; /* 버튼 애니메이션 효과 */
+
+            /* 버튼에 누르는 애니메이션 효과를 추가합니다 */
+            transform: translate(0, 0);
+        }
+        .button:hover {
+             transform: translate(0, 2px); /* 호버 시 약간 아래로 이동하여 입체적인 느낌을 줍니다 */
+             box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* 그림자 효과 강화 */
+             filter: brightness(1.2); /* 유광 효과 추가 */
+         }
+         .button:active {
+             transform: translate(0, 4px); /* 클릭 시 버튼이 더 아래로 이동하는 애니메이션 효과 */
+             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* 클릭 시 그림자 효과 강화 */
+         }           
+    </style>
+</head>
+    <header>
+        <h1>타이머</h1>
+        <nav>
+            <ul>
+              <li><a href="index.html">홈</a></li>
+              <li><a href="교과서 모음.html">교과서 모음</a></li>
+              <li><a href="타이머.html">타이머</a></li>
+              <li><a href="memo.html">메모</a></li>
+              <li><a href="https://www.instagram.com/seong._.ho08/">사이트 제작 문의</a></li>
+            </ul>
+          </nav>
+    </header>
+    <body>
+        <h2>현재 시간</h2>
+    <div id="current-korea-time"></div>
+ 
+    <h2>타이머</h2>
+    <div id="timer">00:00</div>
+    <div class="input-container">
+        <input type="number" id="minutes-input" placeholder="분" max="99">
+        <span>:</span>
+        <input type="number" id="seconds-input" placeholder="초" max="59">
+    </div>
+    <div class="buttons-container">
+        <button onclick="startTimer()">시작</button>
+        <button onclick="stopTimer()">정지</button>
+        <button onclick="resetTimer()">초기화</button>
+    </div>
+    <h2>스톱워치</h2>
+    <div id="stopwatch">00:00:000</div>
+    <div class="buttons-container">
+        <button onclick="startStopwatch()">시작</button>
+        <button onclick="stopStopwatch()">정지</button>
+        <button onclick="resetStopwatch()">초기화</button>
+        <button id="save-button" onclick="saveTime()">시간 저장</button>
+        <button id="clear-button" onclick="clearTimes()">시간 삭제</button>
+    </div>
+    <div id="current-time"></div>
+    <ul id="saved-times"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>

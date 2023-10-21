@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>메모</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #editor {
+            width: 100%;
+            height: 300px;
+            font-size: 16px; /* 글자 크기 조정 */
+            font-weight: bold; /* 글자 두껍게 설정 */
+        }
+        #charCount {
+            text-align: right;
+            font-size: 14px;
+            color: rgb(48, 47, 47);
+        }
+        button{
+            background-color: #ccc; /* 직사각형 배경 색상 */
+            padding: 3px; /* 내부 여백 */
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            font-size: 16px; /* 글자 크기 조정 */
+            font-weight: bold; /* 글자 두껍게 설정 */
+        }
+        .button {
+            width: 120px;
+            height: 30px; /* 버튼 높이 설정 */
+            background-color: #333; /* 버튼 배경 색상 */
+            color: #fff; /* 글자색 설정 */
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px; /* 둥근 모서리 설정 */
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease; /* 버튼 애니메이션 효과 */
+
+            /* 버튼에 누르는 애니메이션 효과를 추가합니다 */
+            transform: translate(0, 0);
+        }
+        .button:hover {
+             transform: translate(0, 2px); /* 호버 시 약간 아래로 이동하여 입체적인 느낌을 줍니다 */
+             box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* 그림자 효과 강화 */
+             filter: brightness(1.2); /* 유광 효과 추가 */
+         }
+         .button:active {
+             transform: translate(0, 4px); /* 클릭 시 버튼이 더 아래로 이동하는 애니메이션 효과 */
+             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* 클릭 시 그림자 효과 강화 */
+         }           
+        
+    </style>
+</head>
+<body>
+    <header>
+    <h1>메모</h1>
+    <nav>
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="교과서 모음.html">교과서 모음</a></li>
+          <li><a href="타이머.html">타이머</a></li>
+          <li><a href="memo_list.html">메모</a></li>
+          <li><a href="https://www.instagram.com/seong._.ho08/">사이트 제작 문의</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- 입력 폼 -->
+    <h2>메모 작성</h2>
+    <input type="text" id="memoTitle" placeholder="메모 제목">
+    <br>
+    <textarea id="editor" placeholder="메모 내용" oninput="updateCharCount()"></textarea>
+    <br>
+    <div id="charCount">글자 수: 0</div> <!-- 글자 수 표시 -->
+
+    <button onclick="saveMemo()">메모 저장</button>
+    <button onclick="exportMemo()">메모 내보내기</button>
+
+    <!-- 메모 리스트 -->
+    <h2>메모 리스트</h2>
+    <ul id="memoList"></ul>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+header {
+  background-image: url(다운로드.jpg);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
+
+nav .menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+main {
+  padding: 20px;
+}
+
+.book {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.book h2 {
+  margin-top: 0;
+}
+
+.book img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+}
+a {
+  text-decoration-line: none;
+  color: inherit;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-container input {
+  width: 40px;
+  text-align: center;
+}
+
+.buttons-container {
+  display: flex;
+}
+
+.buttons-container button {
+  width: 80px; /* 버튼 크기를 일정하게 조절합니다. */
+  height: 30px; /* 버튼 높이를 조절합니다. */
+  margin: 3px; /* 버튼들 사이의 간격 조절 */
+}
+
+#timer {
+  font-size: 36px;
+}
+
+#stopwatch {
+  font-size: 36px;
+}
+
+#save-button {
+  /* margin-top: 10px; */
+}
+
+#saved-times {
+  margin-top: 20px;
+}
+
+#current-korea-time {
+  margin-top: 20px;
+  font-size: 30px;
+}
